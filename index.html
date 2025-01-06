@@ -4,114 +4,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Shajra-e-Ghulam Farid</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
         body {
-            background: linear-gradient(90deg, #153677, #4e085f);
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg,
+                    #335580,
+                    /* Soft Navy Blue */
+                    #4a90e2,
+                    /* Light Blue */
+                    #092d5c);
         }
 
-        .wel {
-            font-weight: 700;
-            color: white;
+
+        .tree {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+
+        .generation {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+        }
+
+        .member {
             text-align: center;
-            font-size: 5rem;
-            font-family: Arial, Helvetica, sans-serif;
+            margin: 0 50px;
+            position: relative;
+
         }
 
-
-        img {
-            width: 15rem;
-            height: 15rem;
+        .member img {
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
             border: 2px solid #333;
             transition: all 0.3s ease;
             object-fit: cover;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin-left: 50rem;
         }
 
-        .text a {
-            margin-left: 49rem;
-            color: white;
-            font-size: 1.5rem;
-            text-decoration: double;
+        .member img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-
-        .box {
-            margin-top: 10rem;
-            margin-left: 50rem;
-            width: 200px;
-            height: 7.8rem;
-            border: 2px solid;
-            background-color: rgba(0, 0, 0, 0.582);
+        /* .member::before,
+        .member::after {
+            content: "";
+            position: absolute;
+            width: 2px;
+            height: 20px;
+            background: #333;
+        } */
+        .member::before {
+            top: -20px;
+            left: 50%;
         }
 
-        .box p {
-            color: white;
-            font-size: 21.4px;
-            text-align: center;
+        .member:first-child::before {
+            display: none;
         }
 
-        .span {
-            position: relative;
-            top: 200px;
-            color: white;
-            font-weight: 700;
-            font-size: 2.5rem;
-            margin-left: 20rem;
-            margin-bottom: 100px;
+        .member::after {
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%) rotate(90deg);
         }
 
-        @media (max-width: 500px) {
-            body {
-                background-position: center;
-                background-size: 90px;
-            }
+        .member:last-child::after {
+            display: none;
+        }
 
-            .text a {
-                font-size: 1rem;
-                margin-left: 120px;
-            }
+        .connector {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
 
-            .wel {
-                font-size: 2rem;
-                margin-right: 60px;
-            }
+        .connector .line {
+            height: 2px;
+            background: #333;
+            flex: 1;
+        }
 
-            img {
-                position: relative;
-                right: 42rem;
-                height: 10rem;
-                width: 10rem;
-            }
+        .member p {
+            font-size: 20px;
 
-            .box {
-                position: relative;
-                right: 42rem;
-            }
 
-            .span {
-                font-size: 1rem;
-                display: none;
-            }
+        }
+
+        p a {
+            text-decoration: none;
+            color: rgb(0, 0, 0);
         }
     </style>
 </head>
 
 <body>
-    <div class="wel">WELCOME</div>
-    <a href="index2.html"><img src="images/ghulaam fareed.jpg" alt=""></a>
-    <div class="text"><a href="index2.html">MIAN GHULAM FAREED</a></div>
-    <div class="box">
-        <p>Jo Apni Details Add Karwana Chahtey Han Wo Rabta Karan Phone Number:03472581126</p>
+
+    <div class="tree">
+        <!-- First Generation -->
+        <div class="generation">
+            <div class="member">
+                <img src="images/ghulaam fareed.jpg" alt="Grandparent">
+                <p>Ghulam Fareed</p>
+            </div>
+        </div>
+        <!-- Second Generation -->
+        <div class="connector">
+            <div class="line"></div>
+        </div>
+
+
+        <div class="generation">
+            <div class="member">
+                <a href="amaan ullah/amaan.html"> <img src="images/amanulah.jpg" alt="Parent 1"></a>
+                <p><a href="amaan ullah/amaan.html">Amaan Ullah</a></p>
+            </div>
+
+            <div class="member">
+                <a href="fazal/fazal.html"><img src="images/fazal2.jpg" alt="Parent 2"></a>
+                <p><a href="fazal/fazal.html">Muhammad Fazal</a></p>
+            </div>
+
+
+
+            <div class="member">
+              <a href="haji m yaar/haji myaar.html"><img src="images/haji m yaar.jpg" alt="Parent 1"></a>  
+              <p><a href="haji m yaar/haji myaar.html">Haji Muhammad Yaar</a></p>
+            </div>
+            <div class="member">
+               <a href="noor jamal/noor.html"><img src="images/noor jamal.jpg" alt=""></a>
+                <p><a href="noor jamal/noor.html">Noor Jamaal</a></p>
+            </div>
+
+
+        </div>
+
+        <div class="generation">
+            <div class="member">
+                <img src="images/liaqat.jpg" alt="Parent 1">
+                <p>Liaqat Ali</p>
+            </div>
+            <div class="member">
+               <a href="ahmad yar/yar.html"><img src="images/ahmad yar.jpg" alt="Parent 2"></a>
+                <p><a href="ahmad yar/yar.html">Ahmad Yaar</a></p>
+            </div>
+
+
+
+            <div class="member">
+                <img src="https://via.placeholder.com/100" alt="Parent 1">
+                <p>Muhammad Afzal</p>
+            </div>
+
+
+        </div>
+
+
+
+
     </div>
-    <span class="span">This Website Is Created By Esmail Raza, Adil Raza and Muhammad Ibrahim</span>
 </body>
 
 </html>
